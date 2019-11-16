@@ -1,0 +1,60 @@
+<html>
+
+   <head>
+     <meta charset="UTF-8">
+   	 <script type="text/javascript" src="displaydata.js"></script>
+<style>
+table {
+  border: 1px solid #167F92;
+  
+ 
+}
+table ,td {
+   page-break-inside:auto;
+   color:#024457;
+   font-family:"Times New Roman", Times, serif;
+
+  }
+  
+  th {
+  background-color: #167F92;
+  color:#FFF;
+  font-weight:bold;
+  font-size:20px;
+  text-align: left;
+  vertical-align: middle;
+  height: 50px;
+  padding: 10px;
+	}
+
+tr:hover {background-color: #D3D3D3;}
+tr:nth-child(odd) {background-color:#EAF3F3;}
+</style>
+   </head>
+<body background-color=black>
+
+<table width=50% height=100% align=center cellspacing=0 cellpadding=5 >
+<caption>
+	<h1> <font-family:"Verdana", Times, serif; Color: #167F92 >
+		Krisis Information
+	</font></h1>
+</caption>
+  <tr>
+     <th>Id</th>
+    <th>LinkName</th>
+    <th>LinkUrl</th>
+    <th>Category</th>
+    <th>Location</th>
+  </tr>
+<% for(var i = 0 ; i < rows.length ; i++) { %>
+       <tr>
+             <td><%= rows[i].Id %></td>
+            <td><%= rows[i].LinkName %></td>
+            <td><%= rows[i].LinkUrl %></td>
+            <td><%= rows[i].Category %></td>
+            <td><%= rows[i].Location %></td>
+       </tr>
+<% } %>
+</table>
+</body>
+</html>
